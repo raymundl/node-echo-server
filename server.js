@@ -1,5 +1,4 @@
 var pkg = require("./package.json");
-var metrics = require("./metrics");
 var http = require("http");
 var dns = require("dns");
 var argv = require('minimist')(process.argv.slice(2));
@@ -73,8 +72,6 @@ http.createServer(function(req, res) {
 		return res.end();
 	} else if (/^\/echo\/(\d+)\/?/.test(req.url)) {
 		return getEcho(RegExp.$1, res);
-	} else if (/^\/echoes-request/.test(req.url)) {
-		return metrics.fetch(req, res);
 	} else if (/^\/echoes/.test(req.url)) {
 		return getEchos(res);
 	} else if (/^\/proxy\.html(\?src=(.+))?$/.test(req.url)) {
