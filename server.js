@@ -135,7 +135,6 @@ http.createServer(function(req, res) {
 		//send after has domains AND request ended
 		if (data.domains === null || !req.ended) return;
 		//process (if able)
-		metrics.process(data);
 		var buff = new Buffer(JSON.stringify(data, null, 2));
 		var length = buff.length;
 		headers['content-length'] = length;
