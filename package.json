@@ -1,5 +1,5 @@
 {
-  "name": "echo-server",
+  "name": "echo-server3",
   "version": "0.4.0",
   "description": "An HTTP server which responds with the request in JSON",
   "main": "server.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://jpillora@github.com/jpillora/node-echo-server.git"
+    "url": "https://github.com/erikriverson/node-echo-server"
   },
   "author": "Jaime Pillora <dev@jpillora.com>",
   "license": "MIT",
