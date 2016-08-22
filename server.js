@@ -161,11 +161,9 @@ http.createServer(function(req, res) {
 	try {
 		dns.reverse(ip, function(err, domains) {
 			data.domains = domains ? domains.length === 1 ? domains[0] : domains.length >= 2 ? domains : undefined : undefined;
-			send();
 		});
 	} catch (err) {
 		data.domains = undefined;
-		send();
 	}
 	//
 	req.on('end', function() {
