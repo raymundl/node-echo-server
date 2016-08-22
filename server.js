@@ -126,7 +126,6 @@ http.createServer(function(req, res) {
 	echoes.push(data);
 	req.on('data', function(buffer) {
 		data.body += buffer.toString();
-                console.log(data.body);
 	});
 	var send = function() {
 		//send after has domains AND request ended
